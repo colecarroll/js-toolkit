@@ -1,7 +1,8 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "jstoolkit - a training program for js beginners to learn built-in methods",
+  "description":
+    "jstoolkit - a training program for js beginners to learn built-in methods",
   "main": "index.js",
   "engines": {
     "node": "8.1.1",
@@ -9,7 +10,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "jstoolkit.io",
   "license": "MIT",
