@@ -1,6 +1,7 @@
 import React from "react";
 import GoogleButton from "./GoogleButton";
 import LearnMore from "./LearnMore";
+import Footer from "./Footer";
 
 const Landing = () => {
   return (
@@ -41,6 +42,7 @@ const Landing = () => {
         </div>
       </div>
       <LearnMore />
+      <Footer />
     </div>
   );
 };

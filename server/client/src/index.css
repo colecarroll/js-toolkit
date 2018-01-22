@@ -86,7 +86,7 @@ p {
   background: #f6f6f6;
   font-family: "PT Sans", sans-serif;
   border-top: 1px solid lightgrey;
-  padding: 0px 100px 0px 100px;
+  padding: 0px 100px 30px 100px;
   width: 100vw;
 }
 
@@ -99,4 +99,20 @@ p {
 .learn-more-headers {
   text-align: center;
   color: #36a7b6;
+}
+
+.learn-more-col {
+  margin: 0 20px 0 20px;
+}
+
+.learn-more-p {
+  color: #808080;
+  margin: 0 0 20px 0;
+}
+
+/* footer  */
+
+footer {
+  text-align: center;
+  padding: 10px 0px 10px 0;
 }
