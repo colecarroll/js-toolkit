@@ -10,16 +10,26 @@ class Header extends Component {
       case false:
         return (
           <div className="nav-links">
-            <a href="#">about</a>
-            <a href="#">pricing</a>
-            <a href="/auth/google">sign in</a>
+            <a className="nav-menu" href="#">
+              about
+            </a>
+            <a className="nav-menu" href="#">
+              pricing
+            </a>
+            <a className="nav-menu" href="/auth/google">
+              sign in
+            </a>
           </div>
         );
       default:
         return (
           <div className="nav-links">
-            <a href="#">lessons</a>
-            <a href="/api/logout">log out</a>
+            <a className="nav-menu" href="#">
+              lessons
+            </a>
+            <a className="nav-menu" href="/api/logout">
+              log out
+            </a>
           </div>
         );
     }
@@ -28,7 +38,7 @@ class Header extends Component {
   render() {
     return (
       <div>
-        <nav>
+        <nav className="nav-menu-div">
           <Link to={this.props.auth ? "/dashboard" : "/"} className="logo">
             <img
               src="logo-blue.png"

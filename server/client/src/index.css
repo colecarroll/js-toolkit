@@ -1,13 +1,14 @@
 body {
   background: #f8f8f8;
 }
+
 /* Navigation styling */
 
-nav {
+.nav-menu-div {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 1% 7% 0 7%;
+  margin: 1% -5% 0 -5%;
   font-family: "PT Sans", sans-serif;
   align-items: center;
 }
@@ -16,17 +17,19 @@ nav {
   margin: 0 0 0 0;
 }
 
-a {
+.nav-menu {
   text-decoration: none;
   color: #555555;
   margin: 0 20px 0 20px;
   transition: 0.3s;
-  /* padding: 0 20px 0 20px; */
+  font-family: "PT Sans", sans-serif;
+  font-size: 115%;
 }
 
-a:hover {
+.nav-menu:hover {
   color: #26b7da;
   text-decoration: none;
+  font-family: "PT Sans", sans-serif;
 }
 
 .logo {
@@ -49,25 +52,51 @@ a:hover {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .subheader {
   color: #36a7b6;
 }
 
 .image-copy {
-  margin: 40px 50px 0 -50px;
-  width: 50%;
+  margin: 40px 70px 0 -70px;
+  width: 40%;
   color: #808080;
   font-family: "PT Sans", sans-serif;
 }
+
 .button-google {
   text-align: center;
   margin: 5px 0 0 0;
 }
 
-hr {
-  margin: -8px 0 -8px 0;
-}
-
 p {
   font-size: 110%;
+  margin: -50px 0px -20px 0px;
+  line-height: 1.2;
+}
+
+.free {
+  margin: 25px 0px 0px 0px;
+  color: #555555;
+}
+
+/* learn more section landing */
+
+.learn-more {
+  background: #f6f6f6;
+  font-family: "PT Sans", sans-serif;
+  border-top: 1px solid lightgrey;
+  padding: 0px 100px 0px 100px;
+  width: 100vw;
+}
+
+.learn-more-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.learn-more-headers {
+  text-align: center;
+  color: #36a7b6;
 }
