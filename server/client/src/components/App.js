@@ -3,11 +3,10 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "../actions";
 import Landing from "./Landing";
-
+import EmailSignUp from "./EmailSignUp";
 import Header from "./Header";
 
 const Dashboard = () => <h2>Dashboard</h2>;
-const EmailSignUp = () => <h2>Enter Email</h2>;
 
 class App extends Component {
   componentDidMount() {

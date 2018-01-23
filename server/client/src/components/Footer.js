@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="nav-links footer-align">
-      &copy jstoolkit.io
+      <span className="user-name-header">Copyright jstoolkit.io</span>
       <a className="nav-menu" href="#">
         terms
       </a>

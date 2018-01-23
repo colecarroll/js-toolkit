@@ -1,4 +1,16 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
+  position: relative;
   background: #f8f8f8;
   width: 100vw;
 }
@@ -44,7 +56,8 @@ body {
 
 /* Landing styling */
 
-.landing {
+.landing,
+.email-sign-up {
   font-family: "PT Sans", sans-serif;
   color: #555555;
   text-align: center;
@@ -91,7 +104,7 @@ p {
   background: #f6f6f6;
   font-family: "PT Sans", sans-serif;
   border-top: 1px solid lightgrey;
-  padding: 0px 100px 30px 100px;
+  padding: 0px 100px 60px 100px;
   width: 100vw;
 }
 
@@ -117,7 +130,18 @@ p {
 
 /* footer  */
 
-footer {
+.footer-align {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
   text-align: center;
-  padding: 10px 0px 10px 0;
+  font-family: "PT Sans", sans-serif;
+}
+
+/* email sign in */
+.email-sign-up {
+  position: relative;
 }
