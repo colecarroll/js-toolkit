@@ -10,8 +10,7 @@ const EmailSignUp = () => {
           Get one 15 minute-or-less tutorial delivered to your inbox each day!
         </h1>
         <h3 className="subheader">
-          You won't receive any spam or offers, and we never share your
-          information.
+          You won't receive any spam or offers, only tutorials.
         </h3>
         <MailChimp />
       </div>
