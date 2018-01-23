@@ -144,4 +144,27 @@ p {
 /* email sign in */
 .email-sign-up {
   position: relative;
+  margin: 10% 25% 0 25%;
+  padding-bottom: 15.5%;
+  text-align: center;
+}
+
+.email-signup-label {
+  margin: 10px 5px 5px 5px;
+  padding: 0px 0px 3px 0px;
+}
+
+.email-signup-input {
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  font-size: 2rem;
+}
+
+label {
+  font-size: 135%;
+  line-height: 1.2;
+}
+
+form {
+  margin: 0px 0px 10px 0;
 }

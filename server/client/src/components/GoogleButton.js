@@ -4,7 +4,7 @@ const GoogleButton = () => {
   return (
     <div className="button-google">
       <a href="/auth/google">
-        <button type="button" class="button-google btn btn-info btn-lg">
+        <button type="button" className="button-google btn btn-info btn-lg">
           Sign in with Google
         </button>
       </a>

@@ -4,16 +4,18 @@ import MailChimp from "./MailChimp";
 
 const EmailSignUp = () => {
   return (
-    <div className="email-sign-up">
-      <div>
-        <h1>Stay on track.</h1>
-        <h1>Get one 15 minute lesson in your inbox each day!</h1>
-        <h5>
+    <div>
+      <div className="email-sign-up">
+        <h1>
+          Get one 15 minute-or-less tutorial delivered to your inbox each day!
+        </h1>
+        <h3 className="subheader">
           You won't receive any spam or offers, and we never share your
           information.
-        </h5>
+        </h3>
         <MailChimp />
       </div>
+      <Footer />
     </div>
   );
 };

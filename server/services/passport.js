@@ -28,7 +28,6 @@ passport.use(
       proxy: true
     },
     async (accessToken, refreshToken, profile, done) => {
-      console.log(profile);
       const existingUser = await User.findOne({ googleId: profile.id });
       if (existingUser) {
         //we already  have a profile of existing user
@@ -39,7 +38,7 @@ passport.use(
         googleId: profile.id,
         name: profile.displayName,
         email: profile.emails[0].value,
-        emailSub: false,
+        emailSub: 0,
         lastCompletedLesson: 0,
         score: 0
       }).save();

@@ -1,4 +1,7 @@
 const passport = require("passport");
+// const mongoose = require("mongoose");
+// const User = mongoose.model("users");
+const requireLogin = require("../middlewares/requireLogin");
 
 module.exports = app => {
   app.get(
@@ -12,7 +15,6 @@ module.exports = app => {
     "/auth/google/callback",
     passport.authenticate("google"),
     (req, res) => {
-      console.log(req.user);
       if (req.user.googleId && req.user.emailSub) {
         res.redirect("/dashboard");
       } else {
@@ -29,5 +31,12 @@ module.exports = app => {
 
   app.get("/api/current_user", (req, res) => {
     res.send(req.user);
+  });
+
+  app.put("/api/email_sub", requireLogin, async (req, res) => {
+    req.user.emailSub = true;
+    console.log(req.user);
+    const user = await req.user.save();
+    res.send(user);
   });
 };
