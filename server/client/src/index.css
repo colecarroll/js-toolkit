@@ -38,6 +38,10 @@ body {
   filter: drop-shadow(3px 3px 3px lightgrey);
 }
 
+.user-name-header {
+  margin: 0 13px 0 0;
+}
+
 /* Landing styling */
 
 .landing {

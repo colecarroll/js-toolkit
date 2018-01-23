@@ -24,12 +24,15 @@ class Header extends Component {
       default:
         return (
           <div className="nav-links">
-            <span>Welcome {this.props.auth.name}</span>
+            <span className="user-name-header">
+              <i class="fa fa-user-o" aria-hidden="true" />{" "}
+              {this.props.auth.name}
+            </span>
             <a className="nav-menu" href="#">
-              lessons
+              <i class="fa fa-bookmark-o" aria-hidden="true" /> lessons
             </a>
             <a className="nav-menu" href="/api/logout">
-              log out
+              <i class="fa fa-sign-out" aria-hidden="true" /> log out
             </a>
           </div>
         );
