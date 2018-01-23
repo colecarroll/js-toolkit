@@ -12,7 +12,12 @@ module.exports = app => {
     "/auth/google/callback",
     passport.authenticate("google"),
     (req, res) => {
-      res.redirect("/dashboard");
+      console.log(req.user);
+      if (req.user.googleId && req.user.emailSub) {
+        res.redirect("/dashboard");
+      } else {
+        res.redirect("/emailSubscribe");
+      }
     }
   );
 

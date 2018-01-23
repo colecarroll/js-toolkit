@@ -24,6 +24,7 @@ class Header extends Component {
       default:
         return (
           <div className="nav-links">
+            <span>Welcome {this.props.auth.name}</span>
             <a className="nav-menu" href="#">
               lessons
             </a>

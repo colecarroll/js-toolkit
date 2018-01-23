@@ -28,13 +28,21 @@ passport.use(
       proxy: true
     },
     async (accessToken, refreshToken, profile, done) => {
+      console.log(profile);
       const existingUser = await User.findOne({ googleId: profile.id });
       if (existingUser) {
         //we already  have a profile of existing user
         return done(null, existingUser);
       }
       //create new instance of user
-      const user = await new User({ googleId: profile.id }).save();
+      const user = await new User({
+        googleId: profile.id,
+        name: profile.displayName,
+        email: profile.emails[0].value,
+        emailSub: false,
+        lastCompletedLesson: 0,
+        score: 0
+      }).save();
       done(null, user);
     }
   )
