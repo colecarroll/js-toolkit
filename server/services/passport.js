@@ -40,7 +40,8 @@ passport.use(
         email: profile.emails[0].value,
         emailSub: 0,
         lastCompletedLesson: 0,
-        score: 0
+        score: 0,
+        rank: 0
       }).save();
       done(null, user);
     }

@@ -8,7 +8,6 @@ export const fetchUser = () => async dispatch => {
 };
 
 export const changeEmailSub = user => async dispatch => {
-  console.log("test");
   const res = await axios.put("/api/email_sub");
 
   dispatch({ type: FETCH_USER, payload: res.data });

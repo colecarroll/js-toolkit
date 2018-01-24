@@ -7,7 +7,8 @@ const userSchema = new Schema({
   email: String,
   emailSub: Boolean,
   lastCompletedLesson: Number,
-  score: Number
+  score: Number,
+  rank: Number
 });
 
 mongoose.model("users", userSchema);

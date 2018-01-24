@@ -168,3 +168,64 @@ label {
 form {
   margin: 0px 0px 10px 0;
 }
+
+/* DASHBOARD */
+
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "PT Sans", sans-serif;
+  margin: 20px 0 0 0;
+}
+/* dashboard left column styling */
+
+.dashboard-header {
+  color: #555555;
+}
+
+.dashboard-subheader {
+  color: #656565;
+}
+
+.accomplishment {
+  color: #36a7b6;
+}
+
+.dashboard-left-column {
+  width: 20%;
+  height: 100vh;
+  background: #f6f6f6;
+  padding-left: 60px;
+  color: #808080;
+  border-top: 1px solid lightgrey;
+}
+
+/* dashboard middle column styling */
+
+.dashboard-middle-column {
+  width: 50%;
+  border-top: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+  padding: 0 50px 0 50px;
+  color: #808080;
+}
+
+/* dashboard right column styling */
+
+.dashboard-right-column {
+  width: 30%;
+  height: 100vh;
+  background: #f6f6f6;
+  border-top: 1px solid lightgrey;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #808080;
+}
+
+.dash-right-accomplishments-cat {
+  background: #ffffff;
+  padding: 3px 10px 3px 10px;
+  border-radius: 3px;
+}

@@ -1,12 +1,16 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import * as actions from "../actions";
+import LeftColumnDashboard from "./LeftColumnDashboard";
+import MiddleColumnDashboard from "./MiddleColumnDashboard";
+import RightColumnDashboard from "./RightColumnDashboard";
 
-class Dashboard extends Component {
-  render() {
-    return <div>Dashboard</div>;
-  }
-}
+const Dashboard = () => {
+  return (
+    <div className="dashboard-container">
+      <LeftColumnDashboard />
+      <MiddleColumnDashboard />
+      <RightColumnDashboard />
+    </div>
+  );
+};
 
-export default connect(null, actions)(Dashboard);
+export default Dashboard;

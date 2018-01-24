@@ -35,7 +35,7 @@ module.exports = app => {
 
   app.put("/api/email_sub", requireLogin, async (req, res) => {
     req.user.emailSub = true;
-    console.log(req.user);
+
     const user = await req.user.save();
     res.send(user);
   });

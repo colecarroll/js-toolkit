@@ -25,14 +25,14 @@ class Header extends Component {
         return (
           <div className="nav-links">
             <span className="user-name-header">
-              <i class="fa fa-user-o" aria-hidden="true" />{" "}
+              <i className="fa fa-user-o" aria-hidden="true" />{" "}
               {this.props.auth.name}
             </span>
             <a className="nav-menu" href="#">
-              <i class="fa fa-bookmark-o" aria-hidden="true" /> lessons
+              <i className="fa fa-bookmark-o" aria-hidden="true" /> lessons
             </a>
             <a className="nav-menu" href="/api/logout">
-              <i class="fa fa-sign-out" aria-hidden="true" /> log out
+              <i className="fa fa-sign-out" aria-hidden="true" /> log out
             </a>
           </div>
         );
