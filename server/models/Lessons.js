@@ -7,9 +7,8 @@ const LessonsSchema = new Schema({
   method_name: String,
   title: String,
   content: String,
-  pointsWorth: Number,
-  codeCheck1: String,
-  codeCheck2: String
+  points_worth: Number,
+  technical_summary: String
 });
 
 mongoose.model("lessons", LessonsSchema);
