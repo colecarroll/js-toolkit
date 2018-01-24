@@ -6,6 +6,7 @@ const passport = require("passport");
 const methodOverride = require("method-override");
 const keys = require("./config/keys");
 require("./models/User");
+require("./models/Lessons");
 require("./services/passport");
 
 mongoose.connect(keys.mongoURI);
@@ -25,6 +26,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require("./routes/authRoutes")(app);
+require("./routes/lessonsRoutes")(app);
 
 if (process.env.NODE_ENV === "production") {
   // Express will serve up production assets

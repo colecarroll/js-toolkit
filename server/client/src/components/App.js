@@ -6,6 +6,7 @@ import Landing from "./Landing";
 import EmailSignUp from "./EmailSignUp";
 import Header from "./Header";
 import Dashboard from "./Dashboard";
+import Lessons from "./Lessons";
 
 class App extends Component {
   componentDidMount() {
@@ -21,6 +22,7 @@ class App extends Component {
             <Route exact path="/" component={Landing} />
             <Route exact path="/dashboard" component={Dashboard} />
             <Route path="/emailSubscribe" component={EmailSignUp} />
+            <Route exact path="/lessons" component={Lessons} />
           </div>
         </BrowserRouter>
       </div>

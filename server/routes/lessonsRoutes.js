@@ -5,6 +5,7 @@ const Lesson = mongoose.model("lessons");
 
 module.exports = app => {
   app.post("/api/lessons", requireLogin, async (req, res) => {
+    console.log(req.body);
     const les = req.body;
 
     const lesson = new Lesson({
@@ -18,6 +19,6 @@ module.exports = app => {
     });
 
     const postedLesson = await lesson.save();
-    res.send(postedLesson);
+    res.redirect("/lessons");
   });
 };
