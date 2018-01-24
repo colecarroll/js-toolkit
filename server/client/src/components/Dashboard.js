@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import LeftColumnDashboard from "./LeftColumnDashboard";
 import MiddleColumnDashboard from "./MiddleColumnDashboard";
 import RightColumnDashboard from "./RightColumnDashboard";

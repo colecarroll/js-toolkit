@@ -12,14 +12,14 @@ class RightColumnDashboard extends Component {
             </h4>
           </div>
         );
-        break;
+
       case 1:
         return (
           <div>
             <h4 className="accomplishment">JS Slugbug</h4>
           </div>
         );
-        break;
+
       default:
         return (
           <div>
@@ -30,8 +30,6 @@ class RightColumnDashboard extends Component {
   }
 
   render() {
-    let score = this.props.auth;
-
     return (
       <div className="dashboard-right-column">
         <h2 className="dashboard-header">Accomplishments</h2>
