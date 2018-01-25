@@ -11,6 +11,7 @@ import Lessons from "./Lessons";
 class App extends Component {
   componentDidMount() {
     this.props.fetchUser();
+    this.props.fetchLessons();
   }
 
   render() {
