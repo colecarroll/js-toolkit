@@ -30,7 +30,6 @@ class RightColumnDashboard extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="dashboard-right-column">
         <h2 className="dashboard-header">Accomplishments</h2>
@@ -52,8 +51,8 @@ class RightColumnDashboard extends Component {
   }
 }
 
-function mapStateToProps({ auth, lessons }) {
-  return { auth, lessons };
+function mapStateToProps({ auth }) {
+  return { auth };
 }
 
 export default connect(mapStateToProps)(RightColumnDashboard);

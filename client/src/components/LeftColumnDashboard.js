@@ -1,15 +1,22 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import * as actions from "../actions";
+import IndividualLessonMethodName from "./IndividualLessonMethodName";
 
 class LeftColumnDashboard extends Component {
   render() {
     return (
       <div className="dashboard-left-column">
         <h2 className="dashboard-header">Lessons</h2>
+        {this.props.lessons.map(lesson => (
+          <IndividualLessonMethodName key={lesson.orderId} lesson={lesson} />
+        ))}
       </div>
     );
   }
 }
 
-export default connect(null, actions)(LeftColumnDashboard);
+function mapStateToProps({ auth, lessons }) {
+  return { auth, lessons };
+}
+
+export default connect(mapStateToProps)(LeftColumnDashboard);
