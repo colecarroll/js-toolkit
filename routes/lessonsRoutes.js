@@ -5,20 +5,24 @@ const Lesson = mongoose.model("lessons");
 
 module.exports = app => {
   app.post("/api/lessons", requireLogin, async (req, res) => {
-    console.log(req.body);
-    const les = req.body;
+    const lessonSubmission = req.body;
 
-    const lesson = new Lesson({
-      orderId: les.orderId,
-      category: les.category,
-      method_name: les.method_name,
-      title: les.title,
-      content: les.content,
-      points_worth: les.points_worth,
-      technical_summary: les.technical_summary
+    const newLesson = new Lesson({
+      orderId: lessonSubmission.orderId,
+      category: lessonSubmission.category,
+      method_name: lessonSubmission.method_name,
+      title: lessonSubmission.title,
+      content: lessonSubmission.content,
+      points_worth: lessonSubmission.points_worth,
+      technical_summary: lessonSubmission.technical_summary
     });
 
-    const postedLesson = await lesson.save();
+    const postedLesson = await newLesson.save();
     res.redirect("/lessons");
+  });
+
+  app.get("/api/lessons", requireLogin, async (req, res) => {
+    const lessons = await Lesson.find();
+    res.send(lessons);
   });
 };
