@@ -24,10 +24,12 @@ body {
   margin: 1% -5% 0 -5%;
   font-family: "PT Sans", sans-serif;
   align-items: center;
+  width: 100vw;
+  height: 13vh;
 }
 
 .nav-links {
-  margin: 0 0 0 0;
+  padding-left: 200px;
 }
 
 .nav-menu {
@@ -48,6 +50,7 @@ body {
 .logo {
   -webkit-filter: drop-shadow(3px 3px 3px lightgrey);
   filter: drop-shadow(3px 3px 3px lightgrey);
+  padding-left: 100px;
 }
 
 .user-name-header {
@@ -234,4 +237,26 @@ form {
 
 .post-lesson-page {
   margin: 40px 150px 20px 150px;
+}
+
+/* INDIVIDUAL LESSON PAGE */
+
+.indv-lesson-body {
+  background: #f6f6f6;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid lightgrey;
+  margin: 20px 0 0 0;
+  font-family: "PT Sans", sans-serif;
+}
+
+.indv-lesson-content {
+  width: 60%;
+  padding: 20px 30px;
+  background: white;
+}
+
+.back-to-dash {
+  padding: 30px 0px 0px 30px;
 }
