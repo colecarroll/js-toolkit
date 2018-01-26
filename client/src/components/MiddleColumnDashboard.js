@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 class MiddleColumnDashboard extends Component {
-  fetchLessonTitle() {
+  fetchLesson() {
     let currentLesson = {};
     let lessonArray = this.props.lessons;
     for (let lesson of lessonArray) {
@@ -11,42 +12,22 @@ class MiddleColumnDashboard extends Component {
       }
     }
 
-    return currentLesson.title;
-  }
-
-  fetchMethodName() {
-    let currentLesson = {};
-    let lessonArray = this.props.lessons;
-    for (let lesson of lessonArray) {
-      if (lesson.orderId === this.props.auth.lastCompletedLesson + 1) {
-        currentLesson = lesson;
-      }
-    }
-    return currentLesson.method_name;
-  }
-
-  fetchTechnicalSummary() {
-    let currentLesson = {};
-    let lessonArray = this.props.lessons;
-    for (let lesson of lessonArray) {
-      if (lesson.orderId === this.props.auth.lastCompletedLesson + 1) {
-        currentLesson = lesson;
-      }
-    }
-    return currentLesson.technical_summary;
+    return currentLesson;
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="dashboard-middle-column">
         <h1 className="dashboard-header">Today's Lesson</h1>
-        <button type="button" className="btn btn-info">
-          Start Next Lesson <i className="fa fa-telegram" aria-hidden="true" />
-        </button>
-        <h3 className="dashboard-subheader">{this.fetchLessonTitle()}</h3>
-        <h4 className="accomplishment">{this.fetchMethodName()}</h4>
-        <p>{this.fetchTechnicalSummary()}</p>
+        <Link to={`/individualLesson/${this.fetchLesson().orderId}`}>
+          <button type="button" className="btn btn-info">
+            Start Next Lesson{" "}
+            <i className="fa fa-telegram" aria-hidden="true" />
+          </button>
+        </Link>
+        <h3 className="dashboard-subheader">{this.fetchLesson().title}</h3>
+        <h4 className="accomplishment">{this.fetchLesson().method_name}</h4>
+        <p>{this.fetchLesson().technical_summary}</p>
       </div>
     );
   }
