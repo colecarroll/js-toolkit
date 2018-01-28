@@ -2,11 +2,39 @@
 
 ## This is a header.
 
-So we said we were going to talk about Global Object Methods, well, `Array.length` is actually a property.
+We said were going to talk about Global Object Methods, well, `Array.length` is actually a property.
 
 That distinction isn't something that you need to worry about right now.  Very simply, `array.length` is a helper designed to quickly tell you how many items are in an array.`String.length` is used very similarly, it will tell you how many characters there are in a string.
 
+In the real-world of production applications, what's contained inside arrays can change rapidly. Data is being pushed in and out, and it would be very difficult to keep track of how many items are in an array at any given time, and you probably wouldn't want to keep track of it anyway. Array.length purpose it to keep track of the size of an array.
+
+Very often, it's used as a way to make sure that when we loop over an array, that we are touching every single item in the array.
+
+Let's say we have we have an array of five usernames, and we want to loop through each name in the array. We wouldn't want to set up our for loop like so: 
+
+```javascript
+var usernames = ['joe', 'kelly', 'diana', 'pete', 'sam']
+
+for ( var i = 0; i < 5; i++) {
+  //do something to each username
+}
+```
+The reason we wouldn't set up our loop like that is because the chances of a user deleting their account or a new user coming to the application and setting up an account is very high. It makes sense to have a helper keep track of how many usernames are in our array.
+
+```javascript
+for ( var i = 0; i < usernames.length; i++) {
+  //do something to each username
+}
+```
+
+You'll be using array.length and string.length (which is the essentially the same as array.length in 90% of cases) all over your code. 
+
+Keep in mind that when you return array.length from a function or your console.log it, you will be returned a positive number. You won't get any info about the data in the array, only it's length in the form of a number data type.
+
+Here's a short tutorial covering some very basic use cases for array.length: 
+
 ***Youtube ID***
+https://www.youtube.com/embed/f9NhMX6EtBY
 
 ***Challenge Description 1***
 
@@ -14,11 +42,11 @@ That distinction isn't something that you need to worry about right now.  Very s
 
 If we have two arrays.
 
-```var Arr1 = ['a', 'r', 'r', 'a', 'y', 1]```
+`var Arr1 = ['a', 'r', 'r', 'a', 'y', 1]`
 
 and
 
-```var Arr2 = ['a', 'r', 'r', 'a', 'y', 't', 'w', 'o']```
+`var Arr2 = ['a', 'r', 'r', 'a', 'y', 't', 'w', 'o']`
 
 Write a JavaScript `if else` statement that console.logs the length of the longer array.
 

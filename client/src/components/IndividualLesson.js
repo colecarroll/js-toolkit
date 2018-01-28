@@ -4,6 +4,17 @@ import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
 class IndividualLesson extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      codeCheck1: false,
+      codeCheck2: false,
+      textArea1: "",
+      textArea2: ""
+    };
+  }
+
   fetchLesson() {
     let currentLesson = {};
     let lessonArray = this.props.lessons;
@@ -13,8 +24,61 @@ class IndividualLesson extends Component {
         currentLesson = lesson;
       }
     }
-
     return currentLesson;
+  }
+
+  updateAuth() {
+    if (this.state.codeCheck1 && this.state.codeCheck2) {
+      console.log("updated score, rank and last completed lesson");
+    }
+  }
+
+  codeCheck1Button() {
+    if (this.state.codeCheck1) {
+      return (
+        <button type="button" className="btn btn-success spacing">
+          <i className="fa fa-wrench" aria-hidden="true" /> Nice Work!
+        </button>
+      );
+    } else {
+      return (
+        <button
+          type="button"
+          className="btn btn-warning spacing"
+          onClick={event => {
+            if (this.state.textArea1 === this.fetchLesson().code_solution_1) {
+              this.setState({ codeCheck1: true });
+            }
+          }}
+        >
+          <i className="fa fa-check-square-o" aria-hidden="true" /> Run Test
+        </button>
+      );
+    }
+  }
+
+  codeCheck2Button() {
+    if (this.state.codeCheck2) {
+      return (
+        <button type="button" className="btn btn-success spacing">
+          <i class="fa fa-wrench" aria-hidden="true" /> Nice Work!
+        </button>
+      );
+    } else {
+      return (
+        <button
+          type="button"
+          className="btn btn-warning spacing"
+          onClick={event => {
+            if (this.state.textArea2 === this.fetchLesson().code_solution_2) {
+              this.setState({ codeCheck2: true });
+            }
+          }}
+        >
+          <i className="fa fa-check-square-o" aria-hidden="true" /> Run Test
+        </button>
+      );
+    }
   }
 
   render() {
@@ -31,42 +95,78 @@ class IndividualLesson extends Component {
           </h3>
 
           <ReactMarkdown
+            className="spacing"
             source={this.fetchLesson().content_1}
             allowTypes={["breaks"]}
           />
+
           <iframe
             width="450"
             height="253"
-            className="embed-responsive-item"
-            frameborder="0"
+            className="embed-responsive-item spacing"
+            frameBorder="0"
             src={this.fetchLesson().youtube_url}
           />
+
           <h3>First Code Challenge</h3>
+
           <ReactMarkdown
+            className="spacing"
             source={this.fetchLesson().challenge_desc_1}
             allowTypes={["breaks"]}
           />
+
           <h3>Enter Your Solution</h3>
-          <textarea name="solution_1" cols="65" rows="5" />
-          <button type="button" className="btn btn-warning">
-            <i class="fa fa-check-square-o" aria-hidden="true" /> Run Test
-          </button>
-          <h3>Final Code Challenge</h3>
+
+          <textarea
+            className="spacing"
+            name="solution_1"
+            cols="65"
+            rows="5"
+            onChange={event => this.setState({ textArea1: event.target.value })}
+          />
+
+          <br />
+
+          {this.codeCheck1Button()}
+
+          <h3 className="spacing">Final Code Challenge</h3>
+
           <ReactMarkdown
+            className="spacing"
             source={this.fetchLesson().challenge_desc_2}
             allowTypes={["breaks"]}
           />
+
           <h3>Enter Your Solution</h3>
-          <textarea name="solution_1" cols="65" rows="5" />
-          <button type="button" className="btn btn-warning">
-            <i class="fa fa-check-square-o" aria-hidden="true" /> Run Test
-          </button>
+
+          <textarea
+            className="spacing"
+            name="solution_1"
+            cols="65"
+            rows="5"
+            onChange={event => this.setState({ textArea2: event.target.value })}
+          />
+
+          <br />
+
+          {this.codeCheck2Button()}
+          {this.updateAuth()}
           <h3>Wrap Up</h3>
+
           <ReactMarkdown
+            className="spacing"
             source={this.fetchLesson().content_2}
             allowTypes={["breaks"]}
           />
+
+          <Link className="spacing" to="/dashboard">
+            <button type="button" class="btn btn-info">
+              Back to Dashboard <i class="fa fa-undo" aria-hidden="true" />
+            </button>
+          </Link>
         </div>
+
         <div className="back-to-dash">
           <Link to="/dashboard">
             <button type="button" className="btn btn-info">
