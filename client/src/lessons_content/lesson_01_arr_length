@@ -1,0 +1,59 @@
+***Content 1***
+
+## This is a header.
+
+So we said we were going to talk about Global Object Methods, well, `Array.length` is actually a property.
+
+That distinction isn't something that you need to worry about right now.  Very simply, `array.length` is a helper designed to quickly tell you how many items are in an array.`String.length` is used very similarly, it will tell you how many characters there are in a string.
+
+***Youtube ID***
+
+***Challenge Description 1***
+
+##### Comparing two arrays
+
+If we have two arrays.
+
+```var Arr1 = ['a', 'r', 'r', 'a', 'y', 1]```
+
+and
+
+```var Arr2 = ['a', 'r', 'r', 'a', 'y', 't', 'w', 'o']```
+
+Write a JavaScript `if else` statement that console.logs the length of the longer array.
+
+***Code Solution 1***
+
+if ( arr1.length > arr2.length) {
+console.log(arr1.length) 
+} else {
+console.log(arr2.length)
+}
+
+***Challenge Description 2***
+##### Looping Through an Array
+
+Given this array of numbers
+
+`var arr = [2, 3, 6, 13, 2, 1, 7]`
+
+Write a `for loop` that iterates through the whole array except for the last number, and console.logs each number as it iterates. Hint: You must use array.length but you will need to modify it slightly.
+
+Remember, here is the standard syntax for a for loop.
+
+```javascript
+for ( var i = 0; i < arr.length; i++) {
+  console.log(xyz)
+}
+```
+
+
+***CODE SOLUTION 2***
+
+for ( var i = 0; i < arr.length - 1; i++) {
+  console.log(arr[i])
+}
+
+***CONTENT 2***
+
+Great work! If you found this lesson to be very easy, not to worry, things will ramp up shortly. `Arr.length` can be used in so many different ways, using it will soon become second nature. We will see you in the next lesson!

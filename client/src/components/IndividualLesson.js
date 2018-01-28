@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
 
 class IndividualLesson extends Component {
   fetchLesson() {
@@ -29,7 +30,42 @@ class IndividualLesson extends Component {
             </span>
           </h3>
 
-          <p>{this.fetchLesson().content}</p>
+          <ReactMarkdown
+            source={this.fetchLesson().content_1}
+            allowTypes={["breaks"]}
+          />
+          <iframe
+            width="450"
+            height="253"
+            className="embed-responsive-item"
+            frameborder="0"
+            src={this.fetchLesson().youtube_url}
+          />
+          <h3>First Code Challenge</h3>
+          <ReactMarkdown
+            source={this.fetchLesson().challenge_desc_1}
+            allowTypes={["breaks"]}
+          />
+          <h3>Enter Your Solution</h3>
+          <textarea name="solution_1" cols="65" rows="5" />
+          <button type="button" className="btn btn-warning">
+            <i class="fa fa-check-square-o" aria-hidden="true" /> Run Test
+          </button>
+          <h3>Final Code Challenge</h3>
+          <ReactMarkdown
+            source={this.fetchLesson().challenge_desc_2}
+            allowTypes={["breaks"]}
+          />
+          <h3>Enter Your Solution</h3>
+          <textarea name="solution_1" cols="65" rows="5" />
+          <button type="button" className="btn btn-warning">
+            <i class="fa fa-check-square-o" aria-hidden="true" /> Run Test
+          </button>
+          <h3>Wrap Up</h3>
+          <ReactMarkdown
+            source={this.fetchLesson().content_2}
+            allowTypes={["breaks"]}
+          />
         </div>
         <div className="back-to-dash">
           <Link to="/dashboard">
