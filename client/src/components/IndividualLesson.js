@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import * as actions from "../actions";
+import Footer from "./Footer";
 
 class IndividualLesson extends Component {
   constructor(props) {
@@ -114,94 +115,102 @@ class IndividualLesson extends Component {
 
   render() {
     return (
-      <div className="indv-lesson-body">
-        <div className="indv-lesson-content">
-          <h1>{this.fetchLesson().title}</h1>
-          <h3>
-            <i className="fa fa-wrench accomplishment" aria-hidden="true" />{" "}
-            {this.fetchLesson().method_name} -- worth:{" "}
-            <span className="accomplishment">
-              {this.fetchLesson().points_worth} points{" "}
-            </span>
-          </h3>
+      <div>
+        <div className="indv-lesson-body">
+          <div className="indv-lesson-content">
+            <h1>{this.fetchLesson().title}</h1>
+            <h3>
+              <i className="fa fa-wrench accomplishment" aria-hidden="true" />{" "}
+              {this.fetchLesson().method_name} -- worth:{" "}
+              <span className="accomplishment">
+                {this.fetchLesson().points_worth} points{" "}
+              </span>
+            </h3>
 
-          <ReactMarkdown
-            className="spacing"
-            source={this.fetchLesson().content_1}
-            allowTypes={["breaks"]}
-          />
+            <ReactMarkdown
+              className="spacing"
+              source={this.fetchLesson().content_1}
+              allowTypes={["breaks"]}
+            />
 
-          <iframe
-            title="lesson video"
-            width="450"
-            height="253"
-            className="embed-responsive-item spacing"
-            frameBorder="0"
-            src={this.fetchLesson().youtube_url}
-          />
+            <iframe
+              title="lesson video"
+              width="450"
+              height="253"
+              className="embed-responsive-item spacing"
+              frameBorder="0"
+              src={this.fetchLesson().youtube_url}
+            />
 
-          <h3>First Code Challenge</h3>
+            <h3>First Code Challenge</h3>
 
-          <ReactMarkdown
-            className="spacing"
-            source={this.fetchLesson().challenge_desc_1}
-            allowTypes={["breaks"]}
-          />
+            <ReactMarkdown
+              className="spacing"
+              source={this.fetchLesson().challenge_desc_1}
+              allowTypes={["breaks"]}
+            />
 
-          <h3>Enter Your Solution</h3>
+            <h3>Enter Your Solution</h3>
 
-          <textarea
-            className="spacing"
-            name="solution_1"
-            cols="65"
-            rows="5"
-            onChange={event => this.setState({ textArea1: event.target.value })}
-          />
+            <textarea
+              className="spacing"
+              name="solution_1"
+              cols="65"
+              rows="5"
+              onChange={event =>
+                this.setState({ textArea1: event.target.value })
+              }
+            />
 
-          <br />
+            <br />
 
-          {this.codeCheck1Button()}
+            {this.codeCheck1Button()}
 
-          <h3 className="spacing">Final Code Challenge</h3>
+            <h3 className="spacing">Final Code Challenge</h3>
 
-          <ReactMarkdown
-            className="spacing"
-            source={this.fetchLesson().challenge_desc_2}
-            allowTypes={["breaks"]}
-          />
+            <ReactMarkdown
+              className="spacing"
+              source={this.fetchLesson().challenge_desc_2}
+              allowTypes={["breaks"]}
+            />
 
-          <h3>Enter Your Solution</h3>
+            <h3>Enter Your Solution</h3>
 
-          <textarea
-            className="spacing"
-            name="solution_1"
-            cols="65"
-            rows="5"
-            onChange={event => this.setState({ textArea2: event.target.value })}
-          />
+            <textarea
+              className="spacing"
+              name="solution_1"
+              cols="65"
+              rows="5"
+              onChange={event =>
+                this.setState({ textArea2: event.target.value })
+              }
+            />
 
-          <br />
+            <br />
 
-          {this.codeCheck2Button()}
-          {this.updateAuth()}
-          <h3>Wrap Up</h3>
+            {this.codeCheck2Button()}
+            {this.updateAuth()}
+            <h3>Wrap Up</h3>
 
-          <ReactMarkdown
-            className="spacing"
-            source={this.fetchLesson().content_2}
-            allowTypes={["breaks"]}
-          />
+            <ReactMarkdown
+              className="spacing"
+              source={this.fetchLesson().content_2}
+              allowTypes={["breaks"]}
+            />
 
-          {this.completedLessonButton()}
+            {this.completedLessonButton()}
+          </div>
+
+          <div className="back-to-dash">
+            <Link to="/dashboard">
+              <button type="button" className="btn btn-info">
+                Back to Dashboard{" "}
+                <i className="fa fa-undo" aria-hidden="true" />
+              </button>
+            </Link>
+          </div>
         </div>
-
-        <div className="back-to-dash">
-          <Link to="/dashboard">
-            <button type="button" className="btn btn-info">
-              Back to Dashboard <i className="fa fa-undo" aria-hidden="true" />
-            </button>
-          </Link>
-        </div>
+        <Footer />
       </div>
     );
   }
