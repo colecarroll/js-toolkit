@@ -32,7 +32,7 @@ class IndividualLesson extends Component {
   updateAuth() {
     if (this.state.codeCheck1 && this.state.codeCheck2) {
       const lessonData = {
-        points: this.props.lessons[0].points_worth
+        points: this.props.lessons[this.fetchLesson().orderId - 1].points_worth
       };
       this.props.lessonComplete(lessonData);
       this.setState({
