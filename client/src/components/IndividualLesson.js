@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
+import * as actions from "../actions";
 
 class IndividualLesson extends Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class IndividualLesson extends Component {
     this.state = {
       codeCheck1: false,
       codeCheck2: false,
+      userUpdated: false,
       textArea1: "",
       textArea2: ""
     };
@@ -18,7 +20,7 @@ class IndividualLesson extends Component {
   fetchLesson() {
     let currentLesson = {};
     let lessonArray = this.props.lessons;
-    let param = parseInt(this.props.match.params.id);
+    let param = Number(this.props.match.params.id);
     for (let lesson of lessonArray) {
       if (lesson.orderId === param) {
         currentLesson = lesson;
@@ -29,12 +31,21 @@ class IndividualLesson extends Component {
 
   updateAuth() {
     if (this.state.codeCheck1 && this.state.codeCheck2) {
-      console.log("updated score, rank and last completed lesson");
+      const lessonData = {
+        points: this.props.lessons[0].points_worth
+      };
+      console.log(lessonData);
+      this.props.lessonComplete(lessonData);
+      this.setState({
+        userUpdated: true,
+        codeCheck1: false,
+        codeCheck2: false
+      });
     }
   }
 
   codeCheck1Button() {
-    if (this.state.codeCheck1) {
+    if (this.state.codeCheck1 || this.state.userUpdated) {
       return (
         <button type="button" className="btn btn-success spacing">
           <i className="fa fa-wrench" aria-hidden="true" /> Nice Work!
@@ -58,10 +69,10 @@ class IndividualLesson extends Component {
   }
 
   codeCheck2Button() {
-    if (this.state.codeCheck2) {
+    if (this.state.codeCheck2 || this.state.userUpdated) {
       return (
         <button type="button" className="btn btn-success spacing">
-          <i class="fa fa-wrench" aria-hidden="true" /> Nice Work!
+          <i className="fa fa-wrench" aria-hidden="true" /> Nice Work!
         </button>
       );
     } else {
@@ -101,6 +112,7 @@ class IndividualLesson extends Component {
           />
 
           <iframe
+            title="lesson video"
             width="450"
             height="253"
             className="embed-responsive-item spacing"
@@ -161,8 +173,8 @@ class IndividualLesson extends Component {
           />
 
           <Link className="spacing" to="/dashboard">
-            <button type="button" class="btn btn-info">
-              Back to Dashboard <i class="fa fa-undo" aria-hidden="true" />
+            <button type="button" className="btn btn-info">
+              Back to Dashboard <i className="fa fa-undo" aria-hidden="true" />
             </button>
           </Link>
         </div>
@@ -170,7 +182,7 @@ class IndividualLesson extends Component {
         <div className="back-to-dash">
           <Link to="/dashboard">
             <button type="button" className="btn btn-info">
-              Back to Dashboard <i class="fa fa-undo" aria-hidden="true" />
+              Back to Dashboard <i className="fa fa-undo" aria-hidden="true" />
             </button>
           </Link>
         </div>
@@ -182,4 +194,4 @@ function mapStateToProps({ auth, lessons }) {
   return { auth, lessons };
 }
 
-export default connect(mapStateToProps)(IndividualLesson);
+export default connect(mapStateToProps, actions)(IndividualLesson);

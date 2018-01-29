@@ -37,4 +37,13 @@ module.exports = app => {
     const user = await req.user.save();
     res.send(user);
   });
+
+  app.put("/api/lessonComplete", requireLogin, async (req, res) => {
+    console.log(req.body);
+    req.user.score += req.body.points;
+    req.user.lastCompletedLesson += 1;
+
+    const user = await req.user.save();
+    res.send(user);
+  });
 };

@@ -15,7 +15,7 @@ class MailChimp extends Component {
             className="email-signup-label email-signup-input"
             type="email"
           />
-          <button type="submit" class="btn btn-info">
+          <button type="submit" className="btn btn-info">
             Submit
           </button>
         </form>
