@@ -7,9 +7,11 @@ class LeftColumnDashboard extends Component {
     return (
       <div className="dashboard-left-column">
         <h2 className="dashboard-header">Lessons</h2>
-        {this.props.lessons.map(lesson => (
-          <IndividualLessonMethodName key={lesson.orderId} lesson={lesson} />
-        ))}
+        {this.props.lessons
+          .reverse()
+          .map(lesson => (
+            <IndividualLessonMethodName key={lesson.orderId} lesson={lesson} />
+          ))}
       </div>
     );
   }
