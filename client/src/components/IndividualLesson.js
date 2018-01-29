@@ -34,7 +34,6 @@ class IndividualLesson extends Component {
       const lessonData = {
         points: this.props.lessons[0].points_worth
       };
-      console.log(lessonData);
       this.props.lessonComplete(lessonData);
       this.setState({
         userUpdated: true,
@@ -88,6 +87,27 @@ class IndividualLesson extends Component {
         >
           <i className="fa fa-check-square-o" aria-hidden="true" /> Run Test
         </button>
+      );
+    }
+  }
+
+  completedLessonButton() {
+    if (this.state.userUpdated) {
+      return (
+        <Link className="spacing" to="/dashboard">
+          <button type="button" className="btn btn-success">
+            Congrats! You've completed this lesson!{" "}
+            <i class="fa fa-certificate" aria-hidden="true" />
+          </button>
+        </Link>
+      );
+    } else {
+      return (
+        <Link className="spacing" to="/dashboard">
+          <button type="button" className="btn btn-info">
+            Back to Dashboard <i className="fa fa-undo" aria-hidden="true" />
+          </button>
+        </Link>
       );
     }
   }
@@ -172,11 +192,7 @@ class IndividualLesson extends Component {
             allowTypes={["breaks"]}
           />
 
-          <Link className="spacing" to="/dashboard">
-            <button type="button" className="btn btn-info">
-              Back to Dashboard <i className="fa fa-undo" aria-hidden="true" />
-            </button>
-          </Link>
+          {this.completedLessonButton()}
         </div>
 
         <div className="back-to-dash">

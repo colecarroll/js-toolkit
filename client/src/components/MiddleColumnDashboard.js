@@ -18,7 +18,7 @@ class MiddleColumnDashboard extends Component {
   render() {
     return (
       <div className="dashboard-middle-column">
-        <h1 className="dashboard-header">Today's Lesson</h1>
+        <h1 className="dashboard-header">Next Lesson</h1>
         <Link to={`/individual_lesson/${this.fetchLesson().orderId}`}>
           <button type="button" className="btn btn-info">
             Start Next Lesson{" "}

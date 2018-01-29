@@ -44,7 +44,7 @@ class RightColumnDashboard extends Component {
         <h3 className="dash-right-accomplishments-cat">
           <i className="fa fa-thermometer-half" aria-hidden="true" /> Points
           needed to reach next rank:{" "}
-          <span className="accomplishment">{this.props.auth.score + 10}</span>
+          <span className="accomplishment">{10 - this.props.auth.score}</span>
         </h3>
       </div>
     );
