@@ -10,9 +10,9 @@ html {
 }
 
 body {
-  position: relative;
   background: #f8f8f8;
   width: 100vw;
+  position: relative;
 }
 
 /* Navigation styling */
@@ -134,7 +134,7 @@ p {
 /* footer  */
 
 .footer-align {
-  position: relative;
+  /* position: absolute; */
   right: 0;
   bottom: 0;
   left: 0;
@@ -148,8 +148,8 @@ p {
 .email-sign-up {
   position: relative;
   margin: 10% 25% 0 25%;
-  padding-bottom: 17.5%;
   text-align: center;
+  height: 60vh;
 }
 
 .email-signup-label {
@@ -180,7 +180,7 @@ form {
   justify-content: space-between;
   font-family: "PT Sans", sans-serif;
   margin: 20px 0 0 0;
-  height: 82vh;
+  /* height: 100vh; */
   font-size: 125%;
 }
 /* dashboard left column styling */

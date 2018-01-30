@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import * as actions from "../actions";
-import Footer from "./Footer";
 
 class IndividualLesson extends Component {
   constructor(props) {
@@ -210,7 +209,6 @@ class IndividualLesson extends Component {
             </Link>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

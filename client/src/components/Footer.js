@@ -3,7 +3,10 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="nav-links footer-align">
-      <span className="user-name-header">Copyright jstoolkit.io</span>
+      <span
+        className="user-name-header"
+        dangerouslySetInnerHTML={{ __html: "&copy; jstoolkit.io" }}
+      />
       <a className="nav-menu" href="/">
         terms
       </a>
