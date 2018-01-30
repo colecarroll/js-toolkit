@@ -180,8 +180,9 @@ form {
   justify-content: space-between;
   font-family: "PT Sans", sans-serif;
   margin: 20px 0 0 0;
-  /* height: 100vh; */
+  height: 80vh;
   font-size: 125%;
+  background-color: #d4d1d1;
 }
 /* dashboard left column styling */
 
@@ -199,34 +200,43 @@ form {
 
 .dashboard-left-column {
   width: 20%;
-  height: 100vh;
+  margin: 1.5% 2% 0 5%;
+  height: 70vh;
   background: #f6f6f6;
-  padding-left: 60px;
   color: #808080;
   border-top: 1px solid lightgrey;
+  text-align: left;
+  padding-left: 2.5%;
+  border-radius: 3px;
 }
 
 /* dashboard middle column styling */
 
 .dashboard-middle-column {
-  width: 50%;
+  border-radius: 3px;
+  margin-top: 1.5%;
+  width: 40%;
+  height: 70vh;
   border-top: 1px solid lightgrey;
   border-right: 1px solid lightgrey;
   border-left: 1px solid lightgrey;
   padding: 0 50px 0 50px;
   color: #808080;
+  background-color: white;
 }
 
 /* dashboard right column styling */
 
 .dashboard-right-column {
-  width: 30%;
-  height: 100vh;
+  width: 25%;
+  margin: 1.5% 5% 0 2%;
+  height: 50vh;
   background: #f6f6f6;
   border-top: 1px solid lightgrey;
   padding-left: 20px;
   padding-right: 20px;
   color: #808080;
+  border-radius: 3px;
 }
 
 .dash-right-accomplishments-cat {

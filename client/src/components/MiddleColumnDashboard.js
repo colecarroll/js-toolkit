@@ -20,13 +20,15 @@ class MiddleColumnDashboard extends Component {
       <div className="dashboard-middle-column">
         <h1 className="dashboard-header">Next Lesson</h1>
         <Link to={`/individual_lesson/${this.fetchLesson().orderId}`}>
-          <button type="button" className="btn btn-info">
+          <button type="button" className="btn btn-info spacing">
             Start Next Lesson{" "}
             <i className="fa fa-telegram" aria-hidden="true" />
           </button>
         </Link>
-        <h3 className="dashboard-subheader">{this.fetchLesson().title}</h3>
-        <h4 className="accomplishment">
+        <h3 className="dashboard-subheader spacing">
+          {this.fetchLesson().title}
+        </h3>
+        <h4 className="accomplishment spacing">
           <i className="fa fa-wrench" aria-hidden="true" />{" "}
           {this.fetchLesson().method_name}
         </h4>
