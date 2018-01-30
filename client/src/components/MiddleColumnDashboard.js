@@ -27,7 +27,7 @@ class MiddleColumnDashboard extends Component {
         </Link>
         <h3 className="dashboard-subheader">{this.fetchLesson().title}</h3>
         <h4 className="accomplishment">
-          <i class="fa fa-wrench" aria-hidden="true" />{" "}
+          <i className="fa fa-wrench" aria-hidden="true" />{" "}
           {this.fetchLesson().method_name}
         </h4>
         <p>{this.fetchLesson().technical_summary}</p>

@@ -12,7 +12,7 @@ class IndividualLessonMethodName extends Component {
         >
           {this.props.lesson.method_name}{" "}
           <i
-            class="fa fa-arrow-circle-o-left accomplishment"
+            className="fa fa-arrow-circle-o-left accomplishment"
             aria-hidden="true"
           />
         </Link>

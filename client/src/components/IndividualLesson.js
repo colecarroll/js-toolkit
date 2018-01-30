@@ -12,8 +12,10 @@ class IndividualLesson extends Component {
       codeCheck1: false,
       codeCheck2: false,
       userUpdated: false,
-      textArea1: "",
-      textArea2: ""
+      textArea1:
+        "if ( arr1.length > arr2.length ) { console.log(arr1.length) } else { console.log(arr2.length) }",
+      textArea2:
+        "for ( var i = 0; i < arr.length - 1; i++) { console.log(arr[i]) }"
     };
   }
 
@@ -34,6 +36,7 @@ class IndividualLesson extends Component {
       const lessonData = {
         points: this.props.lessons[this.fetchLesson().orderId - 1].points_worth
       };
+      console.log(lessonData);
       this.props.lessonComplete(lessonData);
       this.setState({
         userUpdated: true,
@@ -152,7 +155,8 @@ class IndividualLesson extends Component {
             <h3>Enter Your Solution</h3>
 
             <textarea
-              className="spacing"
+              className="spacing code-text"
+              value={this.fetchLesson().code_solution_1}
               name="solution_1"
               cols="65"
               rows="5"
@@ -176,7 +180,8 @@ class IndividualLesson extends Component {
             <h3>Enter Your Solution</h3>
 
             <textarea
-              className="spacing"
+              className="spacing code-text"
+              value={this.fetchLesson().code_solution_2}
               name="solution_1"
               cols="65"
               rows="5"
