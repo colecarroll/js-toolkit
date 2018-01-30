@@ -25,7 +25,7 @@ body {
   font-family: "PT Sans", sans-serif;
   align-items: center;
   width: 100vw;
-  height: 13vh;
+  height: 10vh;
 }
 
 .nav-links {
@@ -134,7 +134,7 @@ p {
 /* footer  */
 
 .footer-align {
-  /* position: absolute; */
+  position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
@@ -180,7 +180,7 @@ form {
   justify-content: space-between;
   font-family: "PT Sans", sans-serif;
   margin: 20px 0 0 0;
-  height: 80vh;
+  height: 90vh;
   font-size: 125%;
   background-color: #d4d1d1;
 }

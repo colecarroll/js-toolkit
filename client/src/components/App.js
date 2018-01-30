@@ -16,6 +16,13 @@ class App extends Component {
     this.props.fetchLessons();
   }
 
+  isAdmin() {
+    if (this.props.auth.email === "colecarroll2@gmail.com") {
+      return Lessons;
+    }
+    return Dashboard;
+  }
+
   render() {
     return (
       <div>
@@ -36,7 +43,7 @@ class App extends Component {
 
             <Route exact path="/dashboard" component={Dashboard} />
             <Route path="/emailSubscribe" component={EmailSignUp} />
-            <Route exact path="/lessons" component={Lessons} />
+            <Route exact path="/lessons" component={this.isAdmin()} />
             <Route path="/individual_lesson/:id" component={IndividualLesson} />
             <Footer />
           </div>
