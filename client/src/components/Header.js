@@ -10,12 +10,12 @@ class Header extends Component {
       case false:
         return (
           <div className="nav-links">
-            <a className="nav-menu" href="/about">
+            <Link className="nav-menu" to="/about">
               about
-            </a>
-            <a className="nav-menu" href="/pricing">
+            </Link>
+            <Link className="nav-menu" to="/pricing">
               pricing
-            </a>
+            </Link>
             <a className="nav-menu" href="/auth/google">
               sign in
             </a>
@@ -28,9 +28,9 @@ class Header extends Component {
               <i className="fa fa-user-o" aria-hidden="true" />{" "}
               {this.props.auth.name}
             </span>
-            <a className="nav-menu" href="/lessons">
+            <Link className="nav-menu" to="/lessons">
               <i className="fa fa-bookmark-o" aria-hidden="true" /> lessons
-            </a>
+            </Link>
             <a className="nav-menu" href="/api/logout">
               <i className="fa fa-sign-out" aria-hidden="true" /> log out
             </a>

@@ -286,3 +286,15 @@ textarea {
 .code-text {
   font-family: "Oxygen Mono", monospace;
 }
+
+/* ABOUT PAGE */
+
+.about-body {
+  background: #f6f6f6;
+  height: 100%;
+
+  padding: 20px 100px 50px 100px;
+  border-top: 1px solid lightgrey;
+  margin: 20px 0 0 0;
+  font-family: "PT Sans", sans-serif;
+}

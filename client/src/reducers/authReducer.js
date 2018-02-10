@@ -1,7 +1,6 @@
 import { FETCH_USER, USER_COMPLETED_LESSON } from "../actions/types";
 
 export default function(state = {}, action) {
-  console.log(action);
   switch (action.type) {
     case FETCH_USER:
       return action.payload || false;

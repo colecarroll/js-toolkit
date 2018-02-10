@@ -9,6 +9,7 @@ import Dashboard from "./Dashboard";
 import Lessons from "./Lessons";
 import IndividualLesson from "./IndividualLesson";
 import Footer from "./Footer";
+import About from "./About";
 
 class App extends Component {
   componentDidMount() {
@@ -42,6 +43,7 @@ class App extends Component {
             />
 
             <Route exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/about" component={About} />
             <Route path="/emailSubscribe" component={EmailSignUp} />
             <Route exact path="/lessons" component={this.isAdmin()} />
             <Route path="/individual_lesson/:id" component={IndividualLesson} />
