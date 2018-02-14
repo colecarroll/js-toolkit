@@ -13,6 +13,9 @@
 * Run npm install in the root and the client file
 * Run brew install yarn
 * In order to view on your local host, run the commmand 'npm run dev'
+* You will likelly need/want to create an [Mlab Account](https://mlab.com) and create a MongoDB deployment for development. You can then store the MONGO_URI in a dev.js file in /config/ file
+* You will also need to sign up for [google's google+ oauth api](https://console.developers.google.com) and create a development Google Client Secret and Google Client Id in that dev.js file in /config/. You can search on googles developer console for 'Google+' and that should bring up the correct api
+* You will also need to set your own cookieKey in a dev.js file in /config/ file. That way index.js of the server will be able to use that variable.
 
 **Future Iterations**
 
