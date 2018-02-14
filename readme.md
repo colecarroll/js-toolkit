@@ -1,4 +1,4 @@
-# JS Toolkit: an training application for beginners to JavaScript
+# JS Toolkit: a training application for beginners to JavaScript
 
 [Deployed Site](https://www.jstoolkit.io)
 
@@ -24,16 +24,16 @@
 
 * Contribute lessons by issuing a pull request. Creat a new file in the _client/src/lessons_content_ folder and set up the file with the following structure. See the existing file _lesson_01_arr_length_ for how the following may be written
 
-**category**: Array (or String, Math, Object)
-**method_name**: e.g. Array.map
-**Title**: (a fun title that encapsulates what the user will be learning about)
-**Technical Summary**: e.g. Array.map() is used for xyz and is useful in xyz situations and contexts.
-**Content 1**: (this needs to be in markdown!) This is the layman terms explanation for what the method does and how its used.
-**Youtube URL**: the url of your youtube education lesson. (every lesson must have a youtube tutorial)
-**Code Challenge Description 1**: (must be in markdown) a description of the first code challenge using that method
-**Solution for Code Challenge 1**: (not in markdown)
-**Code Challenge Description 2**: (must be in markdown) a description of the second code challenge using that method
-**Solution for Code Challenge 2**: (not in markdown)
-**Content 2**: this is a wrap up of the lesson
+* **category**: Array (or String, Math, Object)
+* **method_name**: e.g. Array.map
+* **Title**: (a fun title that encapsulates what the user will be learning about)
+* **Technical Summary**: e.g. Array.map() is used for xyz and is useful in xyz situations and contexts.
+* **Content 1**: (this needs to be in markdown!) This is the layman terms explanation for what the method does and how its used.
+* **Youtube URL**: the url of your youtube education lesson. (every lesson must have a youtube tutorial)
+* **Code Challenge Description 1**: (must be in markdown) a description of the first code challenge using that method
+* **Solution for Code Challenge 1**: (not in markdown)
+* **Code Challenge Description 2**: (must be in markdown) a description of the second code challenge using that method
+* **Solution for Code Challenge 2**: (not in markdown)
+* **Content 2**: this is a wrap up of the lesson
 
 Please email colecarroll2@gmail.com with any questions or help
