@@ -1,10 +1,10 @@
-#JS Toolkit: an training application for beginners to JavaScript
+# JS Toolkit: an training application for beginners to JavaScript
 
 [Deployed Site](https://www.jstoolkit.io)
 
 [Youtube Walkthrough](https://youtu.be/w3dXfNHWhdo)
 
-##Instructions
+## Instructions
 
 **To run locally**
 
@@ -20,7 +20,7 @@
 2. The MailChimp API will be integrated once a proper testing structure has been put in place and lessons can be built out
 3. The ranking system will be built out next, which will be very simple based on the switch statement in the code base, once a proper testing console is in place and the mailchimp api is integrated
 
-   **To Contribute**
+**To Contribute**
 
 * Contribute lessons by issuing a pull request. Creat a new file in the _client/src/lessons_content_ folder and set up the file with the following structure. See the existing file _lesson_01_arr_length_ for how the following may be written
 
